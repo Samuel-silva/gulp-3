@@ -24,10 +24,59 @@
     theme: 'snow'
   });
 
-  $( "#salvarQuill" ).on( "click", function() {
-    const contents = quill.getContents();
+  const api = [
+    {
+      "insert": "\nteste"
+    },
+    {
+      "attributes": {
+        "list": "ordered"
+      },
+      "insert": "\n"
+    },
+    {
+      "insert": "teste"
+    },
+    {
+      "attributes": {
+        "list": "ordered"
+      },
+      "insert": "\n"
+    },
+    {
+      "insert": "teste"
+    },
+    {
+      "attributes": {
+        "list": "ordered"
+      },
+      "insert": "\n"
+    },
+    {
+      "insert": "teste"
+    },
+    {
+      "attributes": {
+        "list": "ordered"
+      },
+      "insert": "\n"
+    },
+    {
+      "insert": "teste"
+    },
+    {
+      "attributes": {
+        "list": "ordered"
+      },
+      "insert": "\n"
+    }
+  ]
+
+  quill.setContents(api)
+
+  $("#salvarQuill").on("click", function () {
+    const contents = quill.getContents({index: 0});
     const html = JSON.stringify(contents, null, 2);
     $('#codeQuill').text(html)
-    // console.log(html)
-  });
-})()
+  })
+}) ()
