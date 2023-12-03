@@ -33,3 +33,36 @@ main.conteudo {
 footer.rodape {
     grid-area: rodape;
 }
+
+
+.content {
+    display: flex;
+    padding-bottom: 15px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.editor {
+    height: 300px;
+    background: white;
+}
+.editor-container {
+    flex-basis: 48%;
+    flex-shrink: 0;
+}
+
+.code-container {
+    background: white;
+    border: 1px solid #999;
+    overflow: auto;
+    padding: 5px;
+    flex-basis: 48%;
+    flex-shrink: 0;
+}
+
+.code {
+    font-family: monospace;
+    overflow: auto;
+    white-space: pre-wrap;
+    width: 50%;
+}
