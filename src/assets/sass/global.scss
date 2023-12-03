@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    font-family: $fonte-principal;
+}
+
+html {
+    height: 100vh;
+}
+
+/* Layout em Grid */
+
+body {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: $altura-cabecalho 1fr $altura-rodape;
+    grid-template-areas:
+        "cabecalho"
+        "conteudo"
+        "rodape";
+    height: 100vh;
+    background-color: #F5F5F5;
+}
+
+header.cabecalho {
+    grid-area: cabecalho;
+}
+
+main.conteudo {
+    grid-area: conteudo;
+}
+
+footer.rodape {
+    grid-area: rodape;
+}
